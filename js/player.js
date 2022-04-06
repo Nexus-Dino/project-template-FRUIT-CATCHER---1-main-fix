@@ -37,15 +37,15 @@ class Player {
     });
   }
 
-  getPlayerAtEnd() {
-    database.ref("playerAtEnd").on("value", (data) => {
+  getPlayersAtEnd() {
+    database.ref("playersAtEnd").on("value", (data) => {
       this.rank = data.val();
     });
   }
 
-  static updatePlayerAtEnd(rank) {
-    database.ref("").update({
-      playerAtEnd: rank,
+  static updatePlayersAtEnd(rank) {
+    database.ref("/").update({
+      playersAtEnd: rank,
     });
   }
 }

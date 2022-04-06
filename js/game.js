@@ -35,7 +35,7 @@ class Game {
     form.hide();
 
     Player.getPlayerInfo();
-    player.getPlayerAtEnd();
+    player.getPlayersAtEnd();
     image(back_img, 0, 0, 1000, 800);
     var x = 100;
     var y = 200;
@@ -63,7 +63,7 @@ class Game {
 
     if (player.score >= 5) {
       player.rank += 1;
-      updatePlayerAtEnd(player.rank);
+      Player.updatePlayersAtEnd(player.rank);
 
       player.update();
       this.showRank();
